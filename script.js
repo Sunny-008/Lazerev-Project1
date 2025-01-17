@@ -98,6 +98,13 @@ function navAnimation() {
       height: 0,
     });
   });
+
+  const threelines = document.querySelector(".threelines");
+  threelines.addEventListener("click", toggleMenu);
+  function toggleMenu() {
+    const navPart2 = document.querySelector(".nav-part2");
+    navPart2.classList.toggle("active");
+  }
 }
 
 function page2Animation() {

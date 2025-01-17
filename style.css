@@ -24,6 +24,96 @@ nav {
   padding: 2vw 10vw;
   z-index: 10;
 }
+@media screen and (max-width: 1000px) {
+  nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 10vw;
+    padding: 2vw 2vw;
+    z-index: 10;
+  }
+  .nav-part2 {
+    display: none;
+
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+  }
+  .nav-elem {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-part2.active {
+    display: flex;
+    /* border: 1px solid red; */
+  }
+
+  .threeline {
+    display: flex;
+    border: 1px solid red;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    margin-right: 10vw;
+  }
+  .bar {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+  }
+
+  nav button {
+    /* border: 1px solid red; */
+    width: 20vw;
+    height: 3.5vw;
+    color: white;
+    background-color: #0da34e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8vw;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 30px;
+    /* border: none; */
+    margin-top: -1vw;
+    margin-right: -40vw;
+    padding: 2px 3px 2px 11px;
+  }
+  nav button svg {
+    /* border: 1px solid red; */
+    height: 5vw;
+    width: 2.5vw;
+  }
+  .nav-bottom {
+    /* border: 1px solid blue; */
+    width: 100vw;
+    align-items: center;
+    height: 0vw;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    z-index: 9;
+    border-bottom: 1.7px solid #dadada;
+    background-color: #111;
+  }
+
+  #page1 > h1 span svg {
+    height: 6vw;
+
+    width: 6vw;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #0da34e;
+  }
+}
 nav > h1 {
   /* border: 1px solid red; */
   margin-top: -0.7%;
@@ -37,12 +127,13 @@ nav > h1 {
   text-transform: uppercase;
   height: fit-content;
   z-index: 10;
+  margin-top: -0.2vw;
 }
 .nav-elem {
   padding: 0 16px;
 }
 .nav-elem h4 {
-  margin: 0 0 3.3vh 0;
+  margin: 0 0 1vw 0;
   cursor: pointer;
   font-weight: 600;
 }
@@ -71,6 +162,7 @@ nav > h1 {
   height: 0vw;
   position: absolute;
   top: 100%;
+  left: 10%;
   z-index: 9;
   border-bottom: 1.7px solid #dadada;
   background-color: #111;
@@ -115,7 +207,7 @@ nav button svg {
   line-height: 8.5vw;
 }
 #page1 > h1 svg {
-  height: 12vh;
+  height: 6vw;
   width: 6vw;
   border-radius: 50%;
   cursor: pointer;
@@ -524,6 +616,7 @@ summary::marker {
 }
 #blue-btn {
   background-color: #4f5bff;
+  cursor: pointer;
   width: 15vw;
   height: 3.5vw;
   border-radius: 100px;
